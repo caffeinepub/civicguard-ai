@@ -1,0 +1,396 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-user-authentication-system-with-role-based-access-control-supporting-three-roles-citizen-authority-and-admin",
+      "featureTitle": "Implement user authentication system with role-based access control supporting three roles: Citizen, Authority, and Admin",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/MobileNav.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-image-upload-functionality-with-automatic-location-and-timestamp-tagging-for-civic-issue-reporting-tobacco-spit-garbage-traffic-violations-public-nuisance",
+      "featureTitle": "Create image upload functionality with automatic location and timestamp tagging for civic issue reporting (tobacco spit, garbage, traffic violations, public nuisance)",
+      "files": [
+        "frontend/src/components/reporting/IssueTypeSelector.tsx",
+        "frontend/src/pages/FileComplaint.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-video-upload-functionality-supporting-30-90-second-videos-for-civic-issue-reporting-with-automatic-location-and-timestamp-tagging",
+      "featureTitle": "Implement video upload functionality supporting 30-90 second videos for civic issue reporting with automatic location and timestamp tagging",
+      "files": [
+        "frontend/src/components/reporting/VideoUploader.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-one-tap-helpline-integration-supporting-112-emergency-1969-traffic-police-and-103-ambulance-with-automatic-city-municipal-contact-detection-based-on-user-location",
+      "featureTitle": "Implement one-tap helpline integration supporting 112 (emergency), 1969 (traffic police), and 103 (ambulance) with automatic city municipal contact detection based on user location",
+      "files": [
+        "frontend/src/components/helpline/HelplinePanel.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-complaint-status-tracking-system-with-four-states-received-under-review-action-taken-and-escalated-allowing-users-to-view-current-status-and-status-history-of-their-reports",
+      "featureTitle": "Create complaint status tracking system with four states: Received, Under Review, Action Taken, and Escalated, allowing users to view current status and status history of their reports",
+      "files": [
+        "frontend/src/pages/ComplaintDetail.tsx",
+        "frontend/src/pages/MyComplaints.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-anonymous-reporting-option-that-allows-users-to-submit-complaints-without-revealing-their-identity-while-maintaining-report-functionality",
+      "featureTitle": "Implement anonymous reporting option that allows users to submit complaints without revealing their identity while maintaining report functionality",
+      "files": [
+        "frontend/src/components/reporting/AnonymousToggle.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-real-time-civic-heatmap-dashboard-displaying-geographic-distribution-of-reported-civic-issues-with-color-coded-intensity-based-on-report-frequency",
+      "featureTitle": "Build real-time civic heatmap dashboard displaying geographic distribution of reported civic issues with color-coded intensity based on report frequency",
+      "files": [
+        "frontend/src/pages/Dashboard.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-area-wise-civic-score-calculation-system-that-generates-cleanliness-and-discipline-index-scores-for-different-geographic-areas-based-on-report-frequency-and-resolution-rates",
+      "featureTitle": "Implement area-wise civic score calculation system that generates cleanliness and discipline index scores for different geographic areas based on report frequency and resolution rates",
+      "files": [
+        "frontend/src/components/dashboard/AreaCivicScores.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-gamified-civic-score-system-with-user-badges-and-city-level-and-school-level-leaderboards-to-encourage-civic-participation",
+      "featureTitle": "Create gamified civic score system with user badges and city-level and school-level leaderboards to encourage civic participation",
+      "files": [
+        "frontend/src/pages/Profile.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-volunteer-and-ngo-task-marketplace-where-organizations-can-post-civic-improvement-tasks-and-volunteers-can-browse-and-accept-assignments",
+      "featureTitle": "Build volunteer and NGO task marketplace where organizations can post civic improvement tasks and volunteers can browse and accept assignments",
+      "files": [
+        "frontend/src/pages/VolunteerMarketplace.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-rti-right-to-information-draft-auto-generator-that-helps-users-create-properly-formatted-rti-requests-based-on-their-civic-complaints",
+      "featureTitle": "Create RTI (Right to Information) draft auto-generator that helps users create properly formatted RTI requests based on their civic complaints",
+      "files": [
+        "frontend/src/pages/RTIGenerator.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-before-after-impact-proof-generator-that-allows-users-to-submit-follow-up-images-showing-issue-resolution-and-creates-visual-comparison-documentation",
+      "featureTitle": "Build before/after impact proof generator that allows users to submit follow-up images showing issue resolution and creates visual comparison documentation",
+      "files": [
+        "frontend/src/pages/ImpactProof.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-multi-language-support-for-hindi-and-english-throughout-the-entire-application-including-ui-text-notifications-and-generated-documents",
+      "featureTitle": "Implement multi-language support for Hindi and English throughout the entire application including UI text, notifications, and generated documents",
+      "files": [
+        "frontend/src/pages/Settings.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-daily-5-question-civic-quiz-feature-with-simple-multiple-choice-questions-about-civic-responsibility-scoring-system-and-result-display",
+      "featureTitle": "Create daily 5-question civic quiz feature with simple multiple-choice questions about civic responsibility, scoring system, and result display",
+      "files": [
+        "frontend/src/pages/Education.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-daily-civic-fact-feature-that-displays-one-educational-fact-each-day-in-simple-language-about-civic-responsibility-cleanliness-or-good-citizenship",
+      "featureTitle": "Implement daily civic fact feature that displays one educational fact each day in simple language about civic responsibility, cleanliness, or good citizenship",
+      "files": [
+        "frontend/src/components/education/DailyFact.tsx",
+        "frontend/src/data/civicFacts.ts",
+        "frontend/src/utils/dailyFactSelection.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-daily-moral-story-feature-that-presents-one-short-story-each-day-with-positive-messages-about-responsibility-cleanliness-and-good-citizenship-in-simple-language",
+      "featureTitle": "Create daily moral story feature that presents one short story each day with positive messages about responsibility, cleanliness, and good citizenship in simple language",
+      "files": [
+        "frontend/src/components/education/DailyStory.tsx",
+        "frontend/src/data/moralStories.ts",
+        "frontend/src/utils/dailyStorySelection.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-motivational-video-section-featuring-age-appropriate-motivational-content-for-mature-audiences-in-user-s-selected-language-hindi-or-english",
+      "featureTitle": "Implement motivational video section featuring age-appropriate motivational content for mature audiences in user's selected language (Hindi or English)",
+      "files": [
+        "frontend/src/components/education/MotivationalVideos.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-tobacco-spit-free-public-report-section-with-dedicated-reporting-interface-and-awareness-messaging-about-health-and-cleanliness-impacts-of-tobacco-spitting",
+      "featureTitle": "Create tobacco spit-free public report section with dedicated reporting interface and awareness messaging about health and cleanliness impacts of tobacco spitting",
+      "files": [
+        "frontend/src/components/reporting/TobaccoReportSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-and-implement-mobile-first-dark-modern-ui-with-clean-layout-easy-navigation-and-consistent-dark-theme-throughout-the-application-that-emphasizes-cleanliness-responsibility-and-good-citizenship",
+      "featureTitle": "Design and implement mobile-first dark modern UI with clean layout, easy navigation, and consistent dark theme throughout the application that emphasizes cleanliness, responsibility, and good citizenship",
+      "files": [
+        "frontend/src/components/layout/AppLayout.tsx",
+        "frontend/src/components/layout/Header.tsx",
+        "frontend/src/components/layout/MobileNav.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

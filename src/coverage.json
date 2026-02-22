@@ -1,0 +1,442 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T11:41:12.667Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 22,
+    "implemented": 19,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Implement user authentication system with role-based access control supporting three roles: Citizen, Authority, and Admin",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/layout/MobileNav.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/layout/MobileNav.tsx"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Create gamified civic score system with user badges and city-level and school-level leaderboards to encourage civic participation",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Profile.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Profile.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Build volunteer and NGO task marketplace where organizations can post civic improvement tasks and volunteers can browse and accept assignments",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/VolunteerMarketplace.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/VolunteerMarketplace.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Implement automatic escalation system that sends 72-hour reminder notifications to authorities for pending complaints and escalates unresolved issues to higher authorities",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Create RTI (Right to Information) draft auto-generator that helps users create properly formatted RTI requests based on their civic complaints",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/RTIGenerator.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/RTIGenerator.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Build before/after impact proof generator that allows users to submit follow-up images showing issue resolution and creates visual comparison documentation",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/ImpactProof.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/ImpactProof.tsx"
+        ]
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Implement multi-language support for Hindi and English throughout the entire application including UI text, notifications, and generated documents",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Settings.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Settings.tsx"
+        ]
+      },
+      {
+        "id": "REQ-16",
+        "summary": "Create daily 5-question civic quiz feature with simple multiple-choice questions about civic responsibility, scoring system, and result display",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Education.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Education.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Implement daily civic fact feature that displays one educational fact each day in simple language about civic responsibility, cleanliness, or good citizenship",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/education/DailyFact.tsx",
+          "frontend/src/data/civicFacts.ts",
+          "frontend/src/components/education/FactHistory.tsx",
+          "frontend/src/utils/dailyFactSelection.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/education/DailyFact.tsx",
+          "frontend/src/data/civicFacts.ts",
+          "frontend/src/utils/dailyFactSelection.ts"
+        ]
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Create daily moral story feature that presents one short story each day with positive messages about responsibility, cleanliness, and good citizenship in simple language",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/education/DailyStory.tsx",
+          "frontend/src/data/moralStories.ts",
+          "frontend/src/components/education/StoryArchive.tsx",
+          "frontend/src/utils/dailyStorySelection.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/education/DailyStory.tsx",
+          "frontend/src/data/moralStories.ts",
+          "frontend/src/utils/dailyStorySelection.ts"
+        ]
+      },
+      {
+        "id": "REQ-19",
+        "summary": "Implement motivational video section featuring age-appropriate motivational content for mature audiences in user's selected language (Hindi or English)",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/education/MotivationalVideos.tsx",
+          "frontend/src/data/motivationalVideos.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/education/MotivationalVideos.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Create image upload functionality with automatic location and timestamp tagging for civic issue reporting (tobacco spit, garbage, traffic violations, public nuisance)",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/FileComplaint.tsx",
+          "frontend/src/hooks/useFileComplaint.ts",
+          "frontend/src/components/reporting/IssueTypeSelector.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/FileComplaint.tsx",
+          "frontend/src/components/reporting/IssueTypeSelector.tsx"
+        ]
+      },
+      {
+        "id": "REQ-20",
+        "summary": "Create tobacco spit-free public report section with dedicated reporting interface and awareness messaging about health and cleanliness impacts of tobacco spitting",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/reporting/TobaccoReportSection.tsx",
+          "frontend/src/data/tobaccoAwareness.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/reporting/TobaccoReportSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-21",
+        "summary": "Design and implement mobile-first dark modern UI with clean layout, easy navigation, and consistent dark theme throughout the application that emphasizes cleanliness, responsibility, and good citizenship",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/layout/AppLayout.tsx",
+          "frontend/src/components/layout/MobileNav.tsx",
+          "frontend/src/components/layout/Header.tsx",
+          "frontend/src/components/common/IconButton.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/layout/AppLayout.tsx",
+          "frontend/src/components/layout/MobileNav.tsx",
+          "frontend/src/components/layout/Header.tsx"
+        ]
+      },
+      {
+        "id": "REQ-22",
+        "summary": "Implement REST API architecture with structured endpoints for authentication, complaint management, user profiles, gamification features, educational content, and administrative functions",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Implement video upload functionality supporting 30-90 second videos for civic issue reporting with automatic location and timestamp tagging",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/reporting/VideoUploader.tsx",
+          "frontend/src/utils/videoValidation.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/reporting/VideoUploader.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Build complaint generation system that creates structured complaint documents from user reports including issue type, location, timestamp, media evidence, and description",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Implement one-tap helpline integration supporting 112 (emergency), 1969 (traffic police), and 103 (ambulance) with automatic city municipal contact detection based on user location",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/helpline/HelplinePanel.tsx",
+          "frontend/src/hooks/useCityDetection.ts",
+          "frontend/src/data/municipalContacts.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/helpline/HelplinePanel.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Create complaint status tracking system with four states: Received, Under Review, Action Taken, and Escalated, allowing users to view current status and status history of their reports",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/MyComplaints.tsx",
+          "frontend/src/pages/ComplaintDetail.tsx",
+          "frontend/src/hooks/useMyComplaints.ts",
+          "frontend/src/hooks/useGetComplaint.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/MyComplaints.tsx",
+          "frontend/src/pages/ComplaintDetail.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Implement anonymous reporting option that allows users to submit complaints without revealing their identity while maintaining report functionality",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/reporting/AnonymousToggle.tsx",
+          "frontend/src/components/complaints/TrackingIdDisplay.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/reporting/AnonymousToggle.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Build real-time civic heatmap dashboard displaying geographic distribution of reported civic issues with color-coded intensity based on report frequency",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Dashboard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Dashboard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Implement area-wise civic score calculation system that generates cleanliness and discipline index scores for different geographic areas based on report frequency and resolution rates",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/dashboard/AreaCivicScores.tsx",
+          "frontend/src/utils/civicScoreCalculations.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/dashboard/AreaCivicScores.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/authorization/MixinAuthorization.mo",
+    "backend/authorization/access-control.mo",
+    "backend/blob-storage/Mixin.mo",
+    "backend/blob-storage/Storage.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/badge-champion.dim_200x200.png",
+    "frontend/public/assets/generated/badge-first-report.dim_200x200.png",
+    "frontend/public/assets/generated/badge-leader.dim_200x200.png",
+    "frontend/public/assets/generated/bg-pattern-civic.dim_800x600.png",
+    "frontend/public/assets/generated/civicguard-logo.dim_256x256.png",
+    "frontend/public/assets/generated/empty-state-reports.dim_400x300.png",
+    "frontend/public/assets/generated/hero-banner.dim_1200x400.png",
+    "frontend/public/assets/generated/icon-garbage.dim_128x128.png",
+    "frontend/public/assets/generated/icon-nuisance.dim_128x128.png",
+    "frontend/public/assets/generated/icon-tobacco.dim_128x128.png",
+    "frontend/public/assets/generated/icon-traffic.dim_128x128.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/auth/LoginButton.tsx",
+    "frontend/src/components/auth/ProfileSetupModal.tsx",
+    "frontend/src/components/complaints/ComplaintStatusBadge.tsx",
+    "frontend/src/components/complaints/ComplaintStatusTimeline.tsx",
+    "frontend/src/components/complaints/ComplaintStatusUpdater.tsx",
+    "frontend/src/components/dashboard/AreaCivicScores.tsx",
+    "frontend/src/components/dashboard/CivicHeatmap.tsx",
+    "frontend/src/components/education/DailyFact.tsx",
+    "frontend/src/components/education/DailyQuiz.tsx",
+    "frontend/src/components/education/DailyStory.tsx",
+    "frontend/src/components/education/MotivationalVideos.tsx",
+    "frontend/src/components/gamification/BadgeDisplay.tsx",
+    "frontend/src/components/gamification/CivicScoreDisplay.tsx",
+    "frontend/src/components/gamification/Leaderboard.tsx",
+    "frontend/src/components/helpline/HelplinePanel.tsx",
+    "frontend/src/components/impact/BeforeAfterComparison.tsx",
+    "frontend/src/components/layout/AppLayout.tsx",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/Header.tsx",
+    "frontend/src/components/layout/MobileNav.tsx",
+    "frontend/src/components/reporting/AnonymousToggle.tsx",
+    "frontend/src/components/reporting/ImageUploader.tsx",
+    "frontend/src/components/reporting/IssueTypeSelector.tsx",
+    "frontend/src/components/reporting/TobaccoReportSection.tsx",
+    "frontend/src/components/reporting/VideoUploader.tsx",
+    "frontend/src/components/rti/RTIGenerator.tsx",
+    "frontend/src/components/settings/LanguageToggle.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/contexts/LanguageContext.tsx",
+    "frontend/src/data/civicFacts.ts",
+    "frontend/src/data/moralStories.ts",
+    "frontend/src/data/quizQuestions.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useGeolocation.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/locales/en.ts",
+    "frontend/src/locales/hi.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/ComplaintDetail.tsx",
+    "frontend/src/pages/Dashboard.tsx",
+    "frontend/src/pages/Education.tsx",
+    "frontend/src/pages/FileComplaint.tsx",
+    "frontend/src/pages/ImpactProof.tsx",
+    "frontend/src/pages/MyComplaints.tsx",
+    "frontend/src/pages/Profile.tsx",
+    "frontend/src/pages/RTIGenerator.tsx",
+    "frontend/src/pages/Settings.tsx",
+    "frontend/src/pages/VolunteerMarketplace.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/src/utils/dailyFactSelection.ts",
+    "frontend/src/utils/dailyQuizSelection.ts",
+    "frontend/src/utils/dailyStorySelection.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

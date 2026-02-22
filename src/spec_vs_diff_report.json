@@ -1,0 +1,180 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T11:41:12.660Z",
+  "summary": "The diff shows partial implementation of a civic reporting platform with authentication, complaint management, and educational features. However, many requirements are either missing entirely or only partially implemented. Key missing functionality includes video upload validation (30-90 second constraint), automatic location tagging, civic heatmap with geographic distribution, area-wise civic score calculation, volunteer/NGO marketplace, automatic 72-hour escalation system, RTI generator, before/after impact proof generator, tobacco spit-free section, and complete multi-language support. Some features like the helpline panel and leaderboards are present but lack full functionality.",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "Implement video upload functionality supporting 30-90 second videos with duration validation",
+      "reason": "No evidence of video duration validation (30-90 seconds) or video file size management in backend/main.mo. The Media type supports video, but no validation logic is present.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "requirement": "Automatic location capture and timestamp tagging for image uploads",
+      "reason": "No evidence of automatic location capture mechanism in frontend code. FileComplaint page is mentioned in routing but implementation is not shown in the diff.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Automatic city municipal contact detection based on user location",
+      "reason": "HelplinePanel shows static helpline numbers but no logic for detecting user's city or displaying municipal contacts based on location.",
+      "evidence": [
+        "frontend/src/components/helpline/HelplinePanel.tsx"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "requirement": "Real-time civic heatmap dashboard with geographic distribution and color-coded intensity",
+      "reason": "CivicHeatmap component is a placeholder showing only 'civicHeatmap' text with no actual map implementation, filtering, or heatmap visualization.",
+      "evidence": [
+        "frontend/src/components/dashboard/CivicHeatmap.tsx"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Area-wise civic score calculation system based on report frequency and resolution rates",
+      "reason": "AreaCivicScores component shows hardcoded static data for three areas with no actual calculation logic based on real reports or resolution rates.",
+      "evidence": [
+        "frontend/src/components/dashboard/AreaCivicScores.tsx"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "City-level and school-level leaderboards with user scores",
+      "reason": "Leaderboard component exists but displays 'noData' placeholder for both city and school tabs with no actual leaderboard data or scoring logic.",
+      "evidence": [
+        "frontend/src/components/gamification/Leaderboard.tsx"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "Volunteer and NGO task marketplace with task posting, browsing, and acceptance",
+      "reason": "VolunteerMarketplace page is routed but no implementation is shown in the diff. No backend types or functions for tasks, volunteers, or NGO accounts.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Automatic 72-hour escalation system with reminders and reassignment to higher authorities",
+      "reason": "No evidence of time-based tracking, automatic reminders, or escalation logic in backend. No timer or scheduling mechanism visible.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "requirement": "RTI draft auto-generator with proper legal format in Hindi and English",
+      "reason": "RTIGenerator page is routed but no implementation shown. No backend functions for generating RTI documents with legal formatting.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "requirement": "Before/after impact proof generator with side-by-side image comparison",
+      "reason": "BeforeAfterComparison component is a placeholder showing 'noData'. No upload functionality for 'after' images or comparison logic.",
+      "evidence": [
+        "frontend/src/components/impact/BeforeAfterComparison.tsx"
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "requirement": "Motivational video section with age-appropriate content organized by category",
+      "reason": "MotivationalVideos component is a placeholder showing 'noData'. No video content, categorization, or video player implementation.",
+      "evidence": [
+        "frontend/src/components/education/MotivationalVideos.tsx"
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "requirement": "Tobacco spit-free public report section with dedicated interface and awareness messaging",
+      "reason": "No dedicated tobacco spit section found. While IssueType includes tobaccoSpit, there's no specialized reporting interface or awareness content section.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "requirement": "Complete multi-language support for Hindi and English including all UI text and generated documents",
+      "reason": "LanguageContext and translation keys exist, but many components show English-only placeholders. No evidence of Hindi translations for complaint documents, RTI drafts, or educational content.",
+      "evidence": [
+        "frontend/src/components/education/DailyStory.tsx",
+        "frontend/src/components/education/DailyFact.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.85,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/auth/LoginButton.tsx",
+    "frontend/src/components/auth/ProfileSetupModal.tsx",
+    "frontend/src/components/complaints/ComplaintStatusBadge.tsx",
+    "frontend/src/components/complaints/ComplaintStatusTimeline.tsx",
+    "frontend/src/components/complaints/ComplaintStatusUpdater.tsx",
+    "frontend/src/components/dashboard/AreaCivicScores.tsx",
+    "frontend/src/components/dashboard/CivicHeatmap.tsx",
+    "frontend/src/components/education/DailyFact.tsx",
+    "frontend/src/components/education/DailyQuiz.tsx",
+    "frontend/src/components/education/DailyStory.tsx",
+    "frontend/src/components/education/MotivationalVideos.tsx",
+    "frontend/src/components/gamification/BadgeDisplay.tsx",
+    "frontend/src/components/gamification/CivicScoreDisplay.tsx",
+    "frontend/src/components/gamification/Leaderboard.tsx",
+    "frontend/src/components/helpline/HelplinePanel.tsx",
+    "frontend/src/components/impact/BeforeAfterComparison.tsx",
+    "frontend/src/components/layout/AppLayout.tsx",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/Header.tsx",
+    "frontend/src/components/layout/MobileNav.tsx",
+    "frontend/src/components/reporting/AnonymousToggle.tsx",
+    "frontend/src/components/reporting/ImageUploader.tsx",
+    "frontend/src/components/reporting/IssueTypeSelector.tsx",
+    "frontend/src/components/reporting/TobaccoReportSection.tsx",
+    "frontend/src/components/reporting/VideoUploader.tsx",
+    "frontend/src/components/rti/RTIGenerator.tsx",
+    "frontend/src/components/settings/LanguageToggle.tsx",
+    "frontend/src/contexts/LanguageContext.tsx",
+    "frontend/src/data/civicFacts.ts",
+    "frontend/src/data/moralStories.ts",
+    "frontend/src/data/quizQuestions.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useGeolocation.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/locales/en.ts",
+    "frontend/src/locales/hi.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/ComplaintDetail.tsx",
+    "frontend/src/pages/Dashboard.tsx",
+    "frontend/src/pages/Education.tsx",
+    "frontend/src/pages/FileComplaint.tsx",
+    "frontend/src/pages/ImpactProof.tsx",
+    "frontend/src/pages/MyComplaints.tsx",
+    "frontend/src/pages/Profile.tsx",
+    "frontend/src/pages/RTIGenerator.tsx",
+    "frontend/src/pages/Settings.tsx",
+    "frontend/src/pages/VolunteerMarketplace.tsx",
+    "frontend/src/utils/dailyFactSelection.ts",
+    "frontend/src/utils/dailyQuizSelection.ts",
+    "frontend/src/utils/dailyStorySelection.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

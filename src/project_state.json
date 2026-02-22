@@ -1,0 +1,348 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "CivicGuard AI - A full-stack civic tech web app for reporting civic issues (garbage, violations, tobacco spit, public nuisance) with AI-powered image/video analysis, auto-complaint generation, privacy features (face/plate blur), status tracking, gamification (civic scores, badges, leaderboards), educational content (daily quiz, facts, stories, videos), helpline integration, heatmap dashboard, volunteer marketplace, RTI generator, and multi-language support (Hindi + English). Mobile-first dark modern UI with scalable backend for Smart City integration.",
+  "architectural_notes": [
+    "Full-stack web app with REST API architecture",
+    "Role-based access control: Citizen, Authority, Admin",
+    "AI services: image/video analysis, face/plate detection, complaint generation, fake report validation, predictive analytics",
+    "Mobile-first responsive design with dark theme",
+    "Multi-language support (Hindi + English)",
+    "Secure cloud storage with scalable backend",
+    "Real-time dashboard with heatmap visualization",
+    "Auto-escalation workflow with notification system",
+    "Integration points: helpline services (112, 1969, 103), municipal APIs",
+    "Gamification engine: scoring, badges, leaderboards at city/school levels"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- App logo featuring civic shield or guard icon with clean modern design suitable for dark theme (civicguard-logo.dim_256x256.png)\n- Hero banner image showing clean city environment with citizens and civic responsibility theme in dark modern style (hero-banner.dim_1200x400.png)\n- Icon for garbage reporting category with trash bin symbol in minimalist style (icon-garbage.dim_128x128.png)\n- Icon for tobacco spit reporting category with prohibition symbol in minimalist style (icon-tobacco.dim_128x128.png)\n- Icon for traffic violation reporting category with traffic sign symbol in minimalist style (icon-traffic.dim_128x128.png)\n- Icon for public nuisance reporting category with alert symbol in minimalist style (icon-nuisance.dim_128x128.png)\n- Badge illustration for first report achievement with medal design (badge-first-report.dim_200x200.png)\n- Badge illustration for civic champion achievement with star design (badge-champion.dim_200x200.png)\n- Badge illustration for community leader achievement with crown design (badge-leader.dim_200x200.png)\n- Illustration for empty state when no reports exist showing clean neighborhood (empty-state-reports.dim_400x300.png)\n- Background pattern for dashboard sections with subtle civic-themed geometric design (bg-pattern-civic.dim_800x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-user-authentication-system-with-role-based-access-control-supporting-three-roles-citizen-authority-and-admin",
+      "title": "Implement user authentication system with role-based access control supporting three roles: Citizen, Authority, and Admin",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-image-upload-functionality-with-automatic-location-and-timestamp-tagging-for-civic-issue-reporting-tobacco-spit-garbage-traffic-violations-public-nuisance",
+      "title": "Create image upload functionality with automatic location and timestamp tagging for civic issue reporting (tobacco spit, garbage, traffic violations, public nuisance)",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-video-upload-functionality-supporting-30-90-second-videos-for-civic-issue-reporting-with-automatic-location-and-timestamp-tagging",
+      "title": "Implement video upload functionality supporting 30-90 second videos for civic issue reporting with automatic location and timestamp tagging",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-one-tap-helpline-integration-supporting-112-emergency-1969-traffic-police-and-103-ambulance-with-automatic-city-municipal-contact-detection-based-on-user-location",
+      "title": "Implement one-tap helpline integration supporting 112 (emergency), 1969 (traffic police), and 103 (ambulance) with automatic city municipal contact detection based on user location",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-complaint-status-tracking-system-with-four-states-received-under-review-action-taken-and-escalated-allowing-users-to-view-current-status-and-status-history-of-their-reports",
+      "title": "Create complaint status tracking system with four states: Received, Under Review, Action Taken, and Escalated, allowing users to view current status and status history of their reports",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-anonymous-reporting-option-that-allows-users-to-submit-complaints-without-revealing-their-identity-while-maintaining-report-functionality",
+      "title": "Implement anonymous reporting option that allows users to submit complaints without revealing their identity while maintaining report functionality",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-real-time-civic-heatmap-dashboard-displaying-geographic-distribution-of-reported-civic-issues-with-color-coded-intensity-based-on-report-frequency",
+      "title": "Build real-time civic heatmap dashboard displaying geographic distribution of reported civic issues with color-coded intensity based on report frequency",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-area-wise-civic-score-calculation-system-that-generates-cleanliness-and-discipline-index-scores-for-different-geographic-areas-based-on-report-frequency-and-resolution-rates",
+      "title": "Implement area-wise civic score calculation system that generates cleanliness and discipline index scores for different geographic areas based on report frequency and resolution rates",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-gamified-civic-score-system-with-user-badges-and-city-level-and-school-level-leaderboards-to-encourage-civic-participation",
+      "title": "Create gamified civic score system with user badges and city-level and school-level leaderboards to encourage civic participation",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-volunteer-and-ngo-task-marketplace-where-organizations-can-post-civic-improvement-tasks-and-volunteers-can-browse-and-accept-assignments",
+      "title": "Build volunteer and NGO task marketplace where organizations can post civic improvement tasks and volunteers can browse and accept assignments",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-rti-right-to-information-draft-auto-generator-that-helps-users-create-properly-formatted-rti-requests-based-on-their-civic-complaints",
+      "title": "Create RTI (Right to Information) draft auto-generator that helps users create properly formatted RTI requests based on their civic complaints",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-before-after-impact-proof-generator-that-allows-users-to-submit-follow-up-images-showing-issue-resolution-and-creates-visual-comparison-documentation",
+      "title": "Build before/after impact proof generator that allows users to submit follow-up images showing issue resolution and creates visual comparison documentation",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-multi-language-support-for-hindi-and-english-throughout-the-entire-application-including-ui-text-notifications-and-generated-documents",
+      "title": "Implement multi-language support for Hindi and English throughout the entire application including UI text, notifications, and generated documents",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-daily-5-question-civic-quiz-feature-with-simple-multiple-choice-questions-about-civic-responsibility-scoring-system-and-result-display",
+      "title": "Create daily 5-question civic quiz feature with simple multiple-choice questions about civic responsibility, scoring system, and result display",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-daily-civic-fact-feature-that-displays-one-educational-fact-each-day-in-simple-language-about-civic-responsibility-cleanliness-or-good-citizenship",
+      "title": "Implement daily civic fact feature that displays one educational fact each day in simple language about civic responsibility, cleanliness, or good citizenship",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-daily-moral-story-feature-that-presents-one-short-story-each-day-with-positive-messages-about-responsibility-cleanliness-and-good-citizenship-in-simple-language",
+      "title": "Create daily moral story feature that presents one short story each day with positive messages about responsibility, cleanliness, and good citizenship in simple language",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-motivational-video-section-featuring-age-appropriate-motivational-content-for-mature-audiences-in-user-s-selected-language-hindi-or-english",
+      "title": "Implement motivational video section featuring age-appropriate motivational content for mature audiences in user's selected language (Hindi or English)",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-tobacco-spit-free-public-report-section-with-dedicated-reporting-interface-and-awareness-messaging-about-health-and-cleanliness-impacts-of-tobacco-spitting",
+      "title": "Create tobacco spit-free public report section with dedicated reporting interface and awareness messaging about health and cleanliness impacts of tobacco spitting",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-and-implement-mobile-first-dark-modern-ui-with-clean-layout-easy-navigation-and-consistent-dark-theme-throughout-the-application-that-emphasizes-cleanliness-responsibility-and-good-citizenship",
+      "title": "Design and implement mobile-first dark modern UI with clean layout, easy navigation, and consistent dark theme throughout the application that emphasizes cleanliness, responsibility, and good citizenship",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "AI image & video reporting with auto location/timestamp tagging",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Auto face & number plate blur for privacy",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Smart complaint generator with structured format",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "One-tap helpline integration with auto city municipal detection",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Complaint status tracking system",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Anonymous reporting option",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Anti-fake reporting AI validation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Real-time Civic Heatmap Dashboard",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Area-wise Civic Score with cleanliness + discipline index",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Gamified Civic Score with badges & leaderboard (city + school level)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Volunteer & NGO task marketplace",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Auto-escalation system with 72hr reminder + higher authority escalation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "RTI draft auto-generator",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Predictive AI for problem hotspot forecasting",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Before/After impact proof generator",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Multi-language support (Hindi + English)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "REST API with authentication and role-based access (Citizen, Authority, Admin)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Daily 5-question civic quiz with scoring",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Daily civic fact in simple language",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Daily short moral story",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Motivational videos for mature people in selected language",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Tobacco spit-free public report section with awareness message",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Mobile-first dark modern UI with clean design",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Secure cloud storage & scalable backend for Smart City integration",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Build complaint generation system that creates structured complaint documents from user reports including issue type, location, timestamp, media evidence, and description",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-36",
+      "summary": "Implement automatic escalation system that sends 72-hour reminder notifications to authorities for pending complaints and escalates unresolved issues to higher authorities",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-46",
+      "summary": "Implement REST API architecture with structured endpoints for authentication, complaint management, user profiles, gamification features, educational content, and administrative functions",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "CivicGuard AI",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,506 @@
+{
+  "kind": "build_request",
+  "title": "Build CivicGuard AI - Full-Stack Civic Tech Reporting Platform",
+  "projectName": "CivicGuard AI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement user authentication system with role-based access control supporting three roles: Citizen, Authority, and Admin",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "authentication, role-based access (Citizen, Authority, Admin)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can register and login with role assignment",
+        "Citizen role has access to reporting and tracking features",
+        "Authority role can review and update complaint status",
+        "Admin role has full system access including user management",
+        "Role-based UI components render based on authenticated user role"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create image upload functionality with automatic location and timestamp tagging for civic issue reporting (tobacco spit, garbage, traffic violations, public nuisance)",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "AI image & 30–90 sec video reporting (tobacco spit ,garbage, traffic violations, public nuisance)",
+          "Auto location + timestamp tagging"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can upload images when creating a report",
+        "Location coordinates are automatically captured and attached to the report",
+        "Timestamp is automatically recorded when image is captured",
+        "Support for multiple issue categories: tobacco spit, garbage, traffic violations, public nuisance",
+        "Images are stored securely in the backend"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement video upload functionality supporting 30-90 second videos for civic issue reporting with automatic location and timestamp tagging",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "AI image & 30–90 sec video reporting"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can upload videos between 30-90 seconds in length",
+        "Video upload validates duration constraints",
+        "Location and timestamp are automatically tagged to video reports",
+        "Videos are stored securely in the backend",
+        "Video file size is managed appropriately for web delivery"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build complaint generation system that creates structured complaint documents from user reports including issue type, location, timestamp, media evidence, and description",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Smart complaint generator (structured format)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "System automatically generates structured complaint document from report data",
+        "Complaint includes issue category, location details, timestamp, media references, and user description",
+        "Structured format is consistent across all complaint types",
+        "Generated complaint is stored and retrievable",
+        "Complaint document can be viewed and downloaded by the reporter"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement one-tap helpline integration supporting 112 (emergency), 1969 (traffic police), and 103 (ambulance) with automatic city municipal contact detection based on user location",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "One-tap helpline integration (112, 1969, 103 + auto city municipal detection)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can access quick dial buttons for 112, 1969, and 103",
+        "System detects user's city based on location",
+        "Municipal helpline contact is automatically displayed for detected city",
+        "Helpline buttons are prominently displayed and easily accessible",
+        "UI clearly labels each helpline with its purpose"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create complaint status tracking system with four states: Received, Under Review, Action Taken, and Escalated, allowing users to view current status and status history of their reports",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Complaint status tracking (Received, Under Review, Action Taken, Escalated)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each complaint has a status field that can be one of: Received, Under Review, Action Taken, Escalated",
+        "Citizens can view the current status of their submitted complaints",
+        "Authority users can update complaint status",
+        "Status change history is tracked with timestamps",
+        "Users receive visual indication of status changes"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement anonymous reporting option that allows users to submit complaints without revealing their identity while maintaining report functionality",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Anonymous reporting option"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can toggle anonymous mode when creating a report",
+        "Anonymous reports do not display reporter identity to authorities",
+        "Anonymous reporters receive a unique tracking ID to check report status",
+        "System maintains report integrity without storing personal identifiers for anonymous reports",
+        "Anonymous option is clearly presented in the reporting UI"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Build real-time civic heatmap dashboard displaying geographic distribution of reported civic issues with color-coded intensity based on report frequency",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Real-time Civic Heatmap Dashboard"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard displays a map view of the city with heatmap overlay",
+        "Heatmap color intensity reflects the density of civic issues in each area",
+        "Map updates in real-time or near real-time as new reports are submitted",
+        "Users can filter heatmap by issue type",
+        "Heatmap is visually clear and accessible on mobile devices"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement area-wise civic score calculation system that generates cleanliness and discipline index scores for different geographic areas based on report frequency and resolution rates",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Area-wise Civic Score (cleanliness + discipline index)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "System calculates civic scores for geographic areas (neighborhoods, districts)",
+        "Score calculation incorporates cleanliness metrics based on garbage and tobacco spit reports",
+        "Score calculation incorporates discipline metrics based on traffic violations and public nuisance reports",
+        "Scores are normalized and displayed as easy-to-understand ratings",
+        "Area scores are updated periodically as new reports are processed"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create gamified civic score system with user badges and city-level and school-level leaderboards to encourage civic participation",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Gamified Civic Score, badges & leaderboard (city + school level)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users earn civic score points for submitting valid reports",
+        "System awards badges for milestones (first report, 10 reports, 50 reports, etc.)",
+        "City-level leaderboard displays top contributors with their scores",
+        "School-level leaderboard is available for student users",
+        "Leaderboards and badges are displayed in user profiles",
+        "Gamification elements use simple, encouraging language"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Build volunteer and NGO task marketplace where organizations can post civic improvement tasks and volunteers can browse and accept assignments",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Volunteer & NGO task marketplace"
+        ]
+      },
+      "acceptanceCriteria": [
+        "NGO and organization accounts can create and post civic tasks",
+        "Tasks include description, location, required volunteers, and time commitment",
+        "Volunteers can browse available tasks and express interest or commit",
+        "Task status tracking shows open, in-progress, and completed tasks",
+        "Volunteers receive recognition in their profiles for completed tasks"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Implement automatic escalation system that sends 72-hour reminder notifications to authorities for pending complaints and escalates unresolved issues to higher authorities",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Auto-escalation system (72hr reminder + higher authority escalation)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "System tracks time elapsed since complaint was submitted or last updated",
+        "Automatic reminder is sent to assigned authority at 72 hours if status remains 'Received' or 'Under Review'",
+        "If no action is taken after reminder, complaint status changes to 'Escalated'",
+        "Escalated complaints are reassigned to higher authority level",
+        "Escalation history is recorded in complaint timeline"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Create RTI (Right to Information) draft auto-generator that helps users create properly formatted RTI requests based on their civic complaints",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "RTI draft auto-generator"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can select a complaint to generate an RTI draft",
+        "System generates RTI document with proper legal format and language",
+        "RTI draft includes complaint details, questions for authorities, and user information",
+        "Generated RTI is available in both Hindi and English",
+        "Users can download or copy the RTI draft for submission"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Build before/after impact proof generator that allows users to submit follow-up images showing issue resolution and creates visual comparison documentation",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Before/After impact proof generator"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can upload 'after' images for resolved complaints",
+        "System displays side-by-side comparison of before and after images",
+        "Impact proof includes timestamps for both images",
+        "Generated proof can be shared or downloaded",
+        "Visual comparison clearly demonstrates the improvement"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Implement multi-language support for Hindi and English throughout the entire application including UI text, notifications, and generated documents",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Multi-language (Hindi + English)",
+          "Use very simple language"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can switch between Hindi and English in app settings",
+        "All UI labels, buttons, and messages display in selected language",
+        "Complaint documents and RTI drafts are generated in selected language",
+        "Language preference persists across sessions",
+        "Text uses simple, easy-to-understand vocabulary in both languages"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Create daily 5-question civic quiz feature with simple multiple-choice questions about civic responsibility, scoring system, and result display",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Daily 5-question civic quiz (with simple answers and score)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "New quiz with 5 questions is available each day",
+        "Questions cover topics like cleanliness, traffic rules, public behavior, environmental responsibility",
+        "Questions use simple language appropriate for all education levels",
+        "Users receive immediate feedback on their answers",
+        "Quiz score out of 5 is displayed after completion",
+        "Quiz history and scores are tracked in user profile"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Implement daily civic fact feature that displays one educational fact each day in simple language about civic responsibility, cleanliness, or good citizenship",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "One daily civic fact in simple language"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new civic fact is displayed each day on the home screen or dedicated section",
+        "Facts are written in simple, accessible language",
+        "Facts cover topics like waste management, traffic safety, public health, environmental care",
+        "Facts are available in both Hindi and English",
+        "Users can view previous days' facts in a history section"
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Create daily moral story feature that presents one short story each day with positive messages about responsibility, cleanliness, and good citizenship in simple language",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "One short moral story every day"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new short moral story is available each day",
+        "Stories are 200-400 words in length with clear moral lessons",
+        "Stories emphasize civic values, community responsibility, and positive behavior",
+        "Stories use simple, engaging language suitable for all ages",
+        "Stories are available in both Hindi and English",
+        "Story archive allows users to read previous stories"
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Implement motivational video section featuring age-appropriate motivational content for mature audiences in user's selected language (Hindi or English)",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Motivational videos for mature people in the selected language"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Video section is accessible from main navigation",
+        "Videos feature motivational content about civic responsibility and community improvement",
+        "Video titles and descriptions display in user's selected language",
+        "Content is appropriate for adult audiences",
+        "Videos are organized by category or theme",
+        "Video player works smoothly on mobile devices"
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Create tobacco spit-free public report section with dedicated reporting interface and awareness messaging about health and cleanliness impacts of tobacco spitting",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Tobacco spit-free public report section with awareness message"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dedicated section for reporting tobacco spit violations with simplified interface",
+        "Section displays educational awareness message about health risks and public cleanliness",
+        "Awareness content uses simple, impactful language",
+        "Report submission follows same process as other civic issues",
+        "Statistics on tobacco spit reports are displayed to show community impact",
+        "Content is available in both Hindi and English"
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "text": "Design and implement mobile-first dark modern UI with clean layout, easy navigation, and consistent dark theme throughout the application that emphasizes cleanliness, responsibility, and good citizenship",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "mobile-first, dark modern UI",
+          "Keep the design clean and easy to use",
+          "Focus on cleanliness, responsibility, and good citizenship"
+        ]
+      },
+      "acceptanceCriteria": [
+        "UI is optimized for mobile screen sizes first, then scales to desktop",
+        "Dark theme is applied consistently across all pages and components",
+        "Color scheme uses modern, professional dark colors with appropriate contrast",
+        "Navigation is intuitive and requires minimal clicks to reach key features",
+        "Typography is clear and readable on dark background",
+        "Visual design emphasizes civic themes through iconography and imagery",
+        "UI responds smoothly to touch interactions on mobile devices",
+        "Design follows accessibility best practices for dark mode"
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "text": "Implement REST API architecture with structured endpoints for authentication, complaint management, user profiles, gamification features, educational content, and administrative functions",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "REST API"
+        ]
+      },
+      "acceptanceCriteria": [
+        "API endpoints follow RESTful conventions",
+        "Endpoints are organized by resource type (users, complaints, tasks, content)",
+        "All endpoints return consistent JSON response format",
+        "API includes proper error handling with meaningful error messages",
+        "Endpoints require appropriate authentication and authorization",
+        "API documentation is available for integration purposes"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not implement real-time WebSocket features for instant updates",
+    "Do not integrate third-party AI services like OpenAI or Anthropic for image analysis",
+    "Do not implement actual SMS or push notification services",
+    "Do not integrate external mapping services or GPS APIs beyond basic location capture",
+    "Do not implement actual phone calling functionality - helpline integration should display contact information only",
+    "Do not implement facial recognition or license plate detection algorithms",
+    "All backend logic must reside in a single Motoko actor",
+    "Frontend must use React, TypeScript, Tailwind CSS, and React Query only",
+    "Do not edit immutable frontend paths: useInternetIdentity.ts, useInternetIdentity.tsx, useActor.ts, main.tsx, components/ui",
+    "Authentication must use Internet Identity, not third-party services",
+    "Do not implement external database systems - use Motoko stable storage"
+  ],
+  "nonGoals": [
+    "Actual AI-powered image/video analysis or content validation",
+    "Real face blurring or number plate detection algorithms",
+    "Predictive AI for problem hotspot forecasting",
+    "Live video streaming or real-time video processing",
+    "Integration with actual government or municipal databases",
+    "Actual cloud storage services (AWS, Google Cloud, Azure)",
+    "Real SMS notifications or email services",
+    "Live phone calling through the app",
+    "Integration with real mapping or GPS services",
+    "Actual payment processing for donations or fees",
+    "Mobile app versions (iOS/Android native apps)",
+    "Browser geolocation beyond basic coordinate capture",
+    "Real-time chat or messaging between users and authorities",
+    "Automated social media sharing or integration"
+  ],
+  "imageRequirements": {
+    "required": [
+      "App logo featuring civic shield or guard icon with clean modern design suitable for dark theme (civicguard-logo.dim_256x256.png)",
+      "Hero banner image showing clean city environment with citizens and civic responsibility theme in dark modern style (hero-banner.dim_1200x400.png)",
+      "Icon for garbage reporting category with trash bin symbol in minimalist style (icon-garbage.dim_128x128.png)",
+      "Icon for tobacco spit reporting category with prohibition symbol in minimalist style (icon-tobacco.dim_128x128.png)",
+      "Icon for traffic violation reporting category with traffic sign symbol in minimalist style (icon-traffic.dim_128x128.png)",
+      "Icon for public nuisance reporting category with alert symbol in minimalist style (icon-nuisance.dim_128x128.png)",
+      "Badge illustration for first report achievement with medal design (badge-first-report.dim_200x200.png)",
+      "Badge illustration for civic champion achievement with star design (badge-champion.dim_200x200.png)",
+      "Badge illustration for community leader achievement with crown design (badge-leader.dim_200x200.png)",
+      "Illustration for empty state when no reports exist showing clean neighborhood (empty-state-reports.dim_400x300.png)",
+      "Background pattern for dashboard sections with subtle civic-themed geometric design (bg-pattern-civic.dim_800x600.png)"
+    ],
+    "edits": []
+  }
+}
